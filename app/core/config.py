@@ -17,8 +17,12 @@ class Settings(BaseSettings):
 
     # Google Gemini API settings
     GEMINI_API_KEY: str
+
+    # Google OAuth2 settings
+    GOOGLE_REDIRECT_URI: str
     GOOGLE_CLIENT_SECRET: str
     GOOGLE_CLIENT_ID: str
+
     # CORS settings
 
     class Config:

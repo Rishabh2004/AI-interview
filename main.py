@@ -1,9 +1,9 @@
 from fastapi.concurrency import asynccontextmanager
 from fastapi import FastAPI
-from app.db.prisma import connect_db, close_db
+from app.db.prisma import connect_db, disconnect_db
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.logger import get_logger
-from app.api import auth
+from app.api.auth.routes import auth
 
 logger = get_logger(__name__)
 
@@ -14,7 +14,7 @@ async def lifespan(app: FastAPI):
     await connect_db()
     yield
     # Shutdown: close database connection
-    await close_db()
+    await disconnect_db()
 
 
 app = FastAPI(title="AI Interview Backend", lifespan=lifespan)
@@ -27,7 +27,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(auth.router)
+app.include_router(auth)
 
 logger.info("Application started")
 
@@ -36,9 +36,3 @@ logger.info("Application started")
 async def root():
     logger.info("Root endpoint accessed")
     return {"message": "AI Interview API is running"}
-
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run("main:app", host="localhost", port=8000, log_level="info", reload=True)

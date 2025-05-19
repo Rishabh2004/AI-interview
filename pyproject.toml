@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "bcrypt>=4.3.0",
     "fastapi>=0.115.12",
+    "google-auth-oauthlib>=1.2.2",
     "google-genai>=1.14.0",
     "passlib>=1.7.4",
     "prisma>=0.15.0",
