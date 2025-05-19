@@ -6,10 +6,6 @@ class Settings(BaseSettings):
     # API details
     PROJECT_NAME: str = "AI Interview Backend"
 
-    # Database settings
-    DB_URL: str
-    DB_NAME: str = "interview_db"
-
     # Security settings
     SECRET_KEY: str
     ALGORITHM: str = "HS256"
@@ -22,6 +18,8 @@ class Settings(BaseSettings):
     GOOGLE_REDIRECT_URI: str
     GOOGLE_CLIENT_SECRET: str
     GOOGLE_CLIENT_ID: str
+    ELEVENLABS_API_KEY: str
+    DATABASE_URL: str
 
     # CORS settings
 

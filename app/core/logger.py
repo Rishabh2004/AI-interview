@@ -27,7 +27,7 @@ logging_config = {
             "stream": sys.stdout,
         },
         "file": {
-            "level": "DEBUG" if settings.DEBUG else "INFO",
+            "level": "DEBUG",
             "class": "logging.handlers.RotatingFileHandler",
             "formatter": "default",
             "filename": str(logs_path / "app.log"),
@@ -38,7 +38,7 @@ logging_config = {
     "loggers": {
         "app": {
             "handlers": ["console", "file"],
-            "level": "DEBUG" if settings.DEBUG else "INFO",
+            "level": "DEBUG",
             "propagate": False,
         },
     },
