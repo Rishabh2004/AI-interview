@@ -1,22 +1,22 @@
 from beanie import Document
-from typing import List, Optional
+from typing import List, Optional, Literal
 from datetime import datetime
 from pydantic import Field
 
 
 class User(Document):
-    username: str
     email: str
     hashed_password: str
     full_name: Optional[str] = None
     disabled: bool = False
+    role: Literal["recruiter", "job_seeker"]  # Added 
     created_at: datetime = Field(default_factory=datetime.now)
 
     class Settings:
         name = "users"
 
 
-class Interview(Document):
+class Jobs(Document):
     title: str
     description: Optional[str] = None
     user_id: str
@@ -25,7 +25,7 @@ class Interview(Document):
     updated_at: datetime = Field(default_factory=datetime.now)
 
     class Settings:
-        name = "interviews"
+        name = "jobs"
 
 
 class Resume(Document):
@@ -40,4 +40,4 @@ class Resume(Document):
 
 
 # Add all document models to this list to register them with Beanie
-document_models = [User, Interview, Resume]
+document_models = [User, Jobs, Resume]

@@ -4,6 +4,7 @@ from app.db.db import init_db, close_db_connection
 from app.models.document_models import document_models
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.logger import get_logger
+from app.api import auth
 
 logger = get_logger(__name__)
 
@@ -26,6 +27,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(auth.router)
 
 logger.info("Application started")
 
