@@ -20,6 +20,8 @@ class Settings(BaseSettings):
     GOOGLE_CLIENT_ID: str
     ELEVENLABS_API_KEY: str
     DATABASE_URL: str
+    OPENAI_API_KEY: str
+    ASSEMBLYAI_API_KEY: str
 
     # CORS settings
 
