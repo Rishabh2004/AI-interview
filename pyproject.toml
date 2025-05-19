@@ -9,6 +9,7 @@ dependencies = [
     "fastapi>=0.115.12",
     "google-genai>=1.14.0",
     "passlib>=1.7.4",
+    "prisma>=0.15.0",
     "pydantic-settings>=2.9.1",
     "pydantic[email]>=2.11.4",
     "pyjwt>=2.10.1",

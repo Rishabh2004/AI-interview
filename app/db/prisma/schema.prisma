@@ -1,0 +1,24 @@
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider             = "prisma-client-py"
+    recursive_type_depth = -1
+}
+
+model User {
+    id             String   @id @default(uuid())
+    email          String   @unique
+    name           String?
+    googleId       String   @unique
+    picture        String?
+    accessTokenId  String?
+    refreshTokenId String?
+    createdAt      DateTime @default(now())
+    updatedAt      DateTime @updatedAt
+
+    @@index([email])
+    @@map("users")
+}

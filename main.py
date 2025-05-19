@@ -1,7 +1,6 @@
-from contextlib import asynccontextmanager
+from fastapi.concurrency import asynccontextmanager
 from fastapi import FastAPI
-from app.db.db import init_db, close_db_connection
-from app.models.document_models import document_models
+from app.db.prisma import connect_db, close_db
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.logger import get_logger
 from app.api import auth
@@ -12,10 +11,10 @@ logger = get_logger(__name__)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup: initialize database
-    await init_db(document_models)
+    await connect_db()
     yield
     # Shutdown: close database connection
-    await close_db_connection()
+    await close_db()
 
 
 app = FastAPI(title="AI Interview Backend", lifespan=lifespan)
