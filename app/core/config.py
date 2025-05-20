@@ -6,6 +6,8 @@ class Settings(BaseSettings):
     # API details
     PROJECT_NAME: str = "AI Interview Backend"
 
+    # Database settings
+    DATABASE_URL: str
     # Security settings
     SECRET_KEY: str
     ALGORITHM: str = "HS256"
@@ -24,6 +26,7 @@ class Settings(BaseSettings):
     ASSEMBLYAI_API_KEY: str
     MEM0_API_KEY: str
 
+    ELEVENLABS_API_KEY: str
     # CORS settings
 
     class Config:
@@ -37,4 +40,5 @@ settings = Settings()
 @lru_cache
 def get_settings() -> Settings:
     """Get settings instance"""
+    print(settings.GOOGLE_REDIRECT_URI)
     return settings

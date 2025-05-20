@@ -8,7 +8,8 @@ from google.auth.exceptions import GoogleAuthError
 from fastapi import HTTPException, status
 from requests.exceptions import RequestException, Timeout
 
-from core.config import get_settings
+from app.core.config import get_settings
+from uuid import uuid4
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -35,6 +36,9 @@ async def verify_google_token(code: str) -> Dict[str, Any]:
         )
 
     try:
+        # Print redirect URI for debugging
+        logger.info(f"Using redirect URI: {settings.GOOGLE_REDIRECT_URI}")
+        
         # Configure OAuth flow with client details and required scopes
         client_config = {
             "web": {
@@ -59,9 +63,18 @@ async def verify_google_token(code: str) -> Dict[str, Any]:
 
         # Exchange authorization code for tokens
         try:
-            flow.fetch_token(code=code)
+            # Don't overwrite the 'code' parameter!
+            token_info = flow.fetch_token(code=code)
+            logger.info("Successfully fetched token from Google")
         except Exception as e:
-            logger.error(f"Failed to fetch token from Google: {str(e)}")
+            error_msg = str(e)
+            if "redirect_uri_mismatch" in error_msg:
+                logger.error(f"Redirect URI mismatch: {error_msg}")
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="REDIRECT_URI_MISMATCH",
+                )
+            logger.error(f"Failed to fetch token from Google: {error_msg}")
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="INVALID_AUTHORIZATION_CODE",
@@ -69,14 +82,14 @@ async def verify_google_token(code: str) -> Dict[str, Any]:
 
         # Validate credentials and ID token
         if not flow.credentials:
-            logger.error("No credentials received from Google")
+            # logger.error("No credentials received from Google")
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED, detail="AUTHENTICATION_FAILED"
             )
 
         id_token_str = flow.credentials.id_token
         if not id_token_str:
-            logger.error("No ID token in Google credentials")
+            # logger.error("No ID token in Google credentials")
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED, detail="NO_ID_TOKEN_RECEIVED"
             )
@@ -91,42 +104,42 @@ async def verify_google_token(code: str) -> Dict[str, Any]:
                 clock_skew_in_seconds=60,  # Allow 1 minute clock skew for server time differences
             )
         except ValueError as e:
-            logger.error(f"Token validation error: {str(e)}")
+            # logger.error(f"Token validation error: {str(e)}")
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED, detail="INVALID_TOKEN"
             )
 
         # Check for required fields in the token payload
         if not idinfo.get("email"):
-            logger.warning("Email missing from verified token")
+            # logger.warning("Email missing from verified token")
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST, detail="EMAIL_REQUIRED"
             )
 
         # Check if email is verified (Google best practice)
         if not idinfo.get("email_verified", False):
-            logger.warning(f"Unverified email: {idinfo.get('email')}")
+            # logger.warning(f"Unverified email: {idinfo.get('email')}")
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN, detail="EMAIL_NOT_VERIFIED"
             )
 
         # Everything passed, return the verified user info
-        logger.info(f"Successfully authenticated Google user: {idinfo.get('email')}")
+        # logger.info(f"Successfully authenticated Google user: {idinfo.get('email')}")
         return idinfo
 
     except Timeout:
-        logger.error("Google authentication request timed out")
+        # logger.error("Google authentication request timed out")
         raise HTTPException(
             status_code=status.HTTP_504_GATEWAY_TIMEOUT, detail="AUTHENTICATION_TIMEOUT"
         )
     except RequestException as e:
-        logger.error(f"Network error during Google authentication: {str(e)}")
+        # logger.error(f"Network error during Google authentication: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="AUTHENTICATION_SERVICE_UNAVAILABLE",
         )
     except GoogleAuthError as e:
-        logger.error(f"Google auth library error: {str(e)}")
+        # logger.error(f"Google auth library error: {str(e)}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="AUTHENTICATION_ERROR",
@@ -137,3 +150,10 @@ async def verify_google_token(code: str) -> Dict[str, Any]:
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="INTERNAL_SERVER_ERROR",
         )
+
+
+async def generate_token_ids():
+    return {
+        "access_token_id": str(uuid4()),
+        "refresh_token_id": str(uuid4()),
+    }
