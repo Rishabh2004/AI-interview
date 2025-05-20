@@ -7,9 +7,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "AI Interview Backend"
 
     # Database settings
-    DB_URL: str
-    DB_NAME: str = "interview_db"
-
+    DATABASE_URL: str
     # Security settings
     SECRET_KEY: str
     ALGORITHM: str = "HS256"
@@ -23,6 +21,7 @@ class Settings(BaseSettings):
     GOOGLE_CLIENT_SECRET: str
     GOOGLE_CLIENT_ID: str
 
+    ELEVENLABS_API_KEY: str
     # CORS settings
 
     class Config:
@@ -36,4 +35,5 @@ settings = Settings()
 @lru_cache
 def get_settings() -> Settings:
     """Get settings instance"""
+    print(settings.GOOGLE_REDIRECT_URI)
     return settings

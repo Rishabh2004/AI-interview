@@ -1,0 +1,797 @@
+2025-05-19 15:55:15 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 15:57:17 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:00:45 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:00:55 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:00:59 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:08:43 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:08:48 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:08:51 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:08:53 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:08:55 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:12:57 - app.db.prisma - ERROR - Failed to connect to Prisma: Could not connect to the query engine
+2025-05-19 16:16:21 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:16:21 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:16:28 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:16:30 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:16:37 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:16:40 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:16:42 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:16:43 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:17:43 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:17:47 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:17:49 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:20:25 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:20:25 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:21:58 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:21:58 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:24:12 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:24:18 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:26:58 - app.api.auth.utils - INFO - Successfully authenticated Google user: panchalrishabh04@gmail.com
+2025-05-19 16:27:39 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:27:44 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:28:48 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:28:50 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:29:53 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (invalid_grant) Bad Request
+2025-05-19 16:29:53 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 399, in raise_from_error
+    raise cls(**kwargs)
+oauthlib.oauth2.rfc6749.errors.InvalidGrantError: (invalid_grant) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:30:59 - app.api.auth.utils - INFO - Successfully authenticated Google user: panchalrishabh04@gmail.com
+2025-05-19 16:31:20 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:31:23 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:31:25 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (invalid_grant) Bad Request
+2025-05-19 16:31:25 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 399, in raise_from_error
+    raise cls(**kwargs)
+oauthlib.oauth2.rfc6749.errors.InvalidGrantError: (invalid_grant) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:32:02 - app.api.auth.utils - INFO - Successfully authenticated Google user: panchalrishabh04@gmail.com
+2025-05-19 16:32:20 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:32:22 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:32:42 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:32:44 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:32:48 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:32:50 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:32:58 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:34:37 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:34:40 - app.api.auth.utils - INFO - Successfully authenticated Google user: panchalrishabh04@gmail.com
+2025-05-19 16:34:55 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:35:23 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:35:51 - app.api.auth.utils - INFO - Successfully authenticated Google user: panchalrishabh04@gmail.com
+2025-05-19 16:36:29 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:36:29 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:36:50 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:36:52 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:36:58 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:37:01 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:37:02 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:37:04 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:37:12 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:37:12 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:37:31 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (invalid_grant) Bad Request
+2025-05-19 16:37:31 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 399, in raise_from_error
+    raise cls(**kwargs)
+oauthlib.oauth2.rfc6749.errors.InvalidGrantError: (invalid_grant) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:39:16 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:39:16 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:40:56 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:40:56 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:40:59 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:41:10 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:41:15 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:41:15 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:41:47 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:42:02 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:42:02 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:43:20 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:43:32 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:43:50 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:43:52 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:44:31 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:44:31 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:45:29 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:45:29 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    flow.fetch_token(code=code)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 66, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:47:34 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:47:36 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:47:38 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:47:40 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:47:59 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:47:59 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    code = flow.fetch_token(code=code)
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 67, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:48:55 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:48:55 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    code = flow.fetch_token(code=code)
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 67, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:51:49 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:51:49 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    code = flow.fetch_token(code=code)
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 67, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:53:19 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:53:30 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:53:30 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    code = flow.fetch_token(code=code)
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 67, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:55:16 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:55:24 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:55:45 - app.api.auth.utils - ERROR - Failed to fetch token from Google: (redirect_uri_mismatch) Bad Request
+2025-05-19 16:55:45 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    code = flow.fetch_token(code=code)
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 67, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:56:38 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:56:40 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:56:40 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:57:19 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:57:36 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:57:38 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:57:52 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 401: INVALID_AUTHORIZATION_CODE
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 63, in verify_google_token
+    code = flow.fetch_token(code=code)
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 67, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 401: INVALID_AUTHORIZATION_CODE
+2025-05-19 16:59:35 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:59:39 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 16:59:40 - app.db.prisma - INFO - Disconnected from Prisma database
+2025-05-19 16:59:42 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 17:03:13 - app.api.auth.utils - INFO - Using redirect URI: http://localhost:3000/api/auth/callback/google
+2025-05-19 17:03:14 - app.api.auth.utils - ERROR - Redirect URI mismatch: (redirect_uri_mismatch) Bad Request
+2025-05-19 17:03:14 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 400: REDIRECT_URI_MISMATCH
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 67, in verify_google_token
+    token_info = flow.fetch_token(code=code)
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 73, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 400: REDIRECT_URI_MISMATCH
+2025-05-19 17:07:32 - app.api.auth.utils - INFO - Using redirect URI: http://localhost:3000/api/auth/callback/google
+2025-05-19 17:07:33 - app.api.auth.utils - ERROR - Redirect URI mismatch: (redirect_uri_mismatch) Bad Request
+2025-05-19 17:07:33 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 400: REDIRECT_URI_MISMATCH
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 67, in verify_google_token
+    token_info = flow.fetch_token(code=code)
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 73, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 400: REDIRECT_URI_MISMATCH
+2025-05-19 17:13:32 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 17:14:17 - app.db.prisma - INFO - Connected to Prisma database
+2025-05-19 17:15:02 - app.api.auth.utils - INFO - Using redirect URI: http://localhost:3000/
+2025-05-19 17:15:03 - app.api.auth.utils - ERROR - Redirect URI mismatch: (redirect_uri_mismatch) Bad Request
+2025-05-19 17:15:03 - app.api.auth.utils - ERROR - Unexpected error during Google authentication: 400: REDIRECT_URI_MISMATCH
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 67, in verify_google_token
+    token_info = flow.fetch_token(code=code)
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\requests_oauthlib\oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\clients\base.py", line 427, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\parameters.py", line 448, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\AI Interview\ai_interview_backend\.venv\Lib\site-packages\oauthlib\oauth2\rfc6749\errors.py", line 400, in raise_from_error
+    raise CustomOAuth2Error(error=error, **kwargs)
+oauthlib.oauth2.rfc6749.errors.CustomOAuth2Error: (redirect_uri_mismatch) Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\AI Interview\ai_interview_backend\app\api\auth\utils.py", line 73, in verify_google_token
+    raise HTTPException(
+    ...<2 lines>...
+    )
+fastapi.exceptions.HTTPException: 400: REDIRECT_URI_MISMATCH
+2025-05-19 17:16:10 - app.db.prisma - INFO - Disconnected from Prisma database
