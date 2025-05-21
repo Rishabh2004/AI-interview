@@ -42,7 +42,7 @@ async def verify_access_token(
 ):
     try:
         token = credentials.credentials
-        payload = jwt.decode(token, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
+        payload = jwt.decode(token, settings.SECRET_KEY, algorithms=settings.ALGORITHM)
         user_id = payload.get("sub")
         user = await prisma.user.find_unique(where={"id": user_id})
         if user:

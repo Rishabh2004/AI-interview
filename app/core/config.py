@@ -25,8 +25,11 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str
     ASSEMBLYAI_API_KEY: str
     MEM0_API_KEY: str
-
+    DEFAULT_USER_ID:str = "default_user"
+    QDRANT_HOST: str
+    QDRANT_API_KEY: str
     ELEVENLABS_API_KEY: str
+    AGENT_ID:str = "agent_01jvrhwnw6ebbs0pc4sn1183ke"
     # CORS settings
 
     class Config:
